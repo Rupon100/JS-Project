@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Project</title>
+    <link rel="stylesheet" href="style.css">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!--header section-->
+    <header id="navbar" class="w-[100%] z-100 fixed shadow-md bg-white  top-0 left-0 right-0">
+        <section class="container mx-auto px-6 flex justify-between items-center py-6">
+            <div class="">
+                <h1 class="text-2xl font-semibold tracking-wider">HOLA</h1>
+            </div>
+            <div>
+                <ul class="hidden sm:flex space-x-5 md:space-x-12 lg:space-x-18">
+                    <li class="list-sty"><a href="#home">Home</a></li>
+                    <li class="list-sty"><a href="#about">About</a></li>
+                    <li class="list-sty"><a href="#products">Products</a></li>
+                    <li class="list-sty"><a href="#contact">Contact</a></li>
+                    <li id="nav-item" class="px-4 py-1 bg-gray-950 rounded-lg">
+                        <a id="cart" class="text-white" href="#add-cart.html">
+                            <i class="fa-solid fa-cart-shopping"> 0</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="menu" class="hidden absolute inset-0 mt-20 w-[90%] h-[50vh]  bg-black  rounded sm:hidden mx-auto">
+                <ul class="h-full flex flex-col justify-center items-center space-y-6 z-10">
+                    <li  class="list-sty-menu">
+                        <a id="llink" href="#home">Home</a>
+                    </li>
+                    <li  class="list-sty-menu">
+                        <a id="llink" href="#about">About</a>
+                    </li>
+                    <li  class="list-sty-menu">
+                        <a id="llink" href="#products">Products</a>
+                    </li>
+                    <li  class="list-sty-menu">
+                        <a id="llink" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sm:hidden">
+                <ul class="flex space-x-4">
+                    <li id="nav-item" class="px-4 py-1 bg-gray-950 rounded-lg">
+                        <a id="cart" class="text-white" href="#add-cart.html">
+                            <i class="fa-solid fa-cart-shopping"> 0</i>
+                        </a>
+                    </li>
+                    
+                    <li id="bar" class="mt-1">
+                        <i class="fa-solid fa-bars text-xl cursor-pointer"></i>
+                    </li>
+                </ul>       
+            </div>
+        </section>
+    </header>
+
+    <!--main body-->
+    <main class="px-6">
+
+        <!--home section-->
+        <section id="home" class="h-screen container mx-auto  sm:mt-10  ">
+            <div class="h-full grid grid-cols-1 md:grid-cols-2 gap-8 place-content-center place-items-center">
+                <div class="flex flex-col gap-2 items-center md:items-start sm:gap-4">
+                    <p class="text-lg md:text-xl font-medium">Front End Developer</p>
+                    <h1 class="text-center text-3xl md:text-5xl md:text-start font-medium">Creating stunning user interfaces</h1>
+                    <button class="self-center md:self-start px-5 py-2 bg-black text-white rounded hover:px-6 transition-all">My Work</button>
+                </div>
+                <div class="flex justify-center items-center">
+                    <img src="/image/home-vector.jpg" alt="home image" class="w-4/5 md:max-w-full">
+                </div>
+            </div>
+        </section>
+
+        <!--products section-->
+        <section id="products" class="flex flex-col justify-center items-center gap-6">
+            <div class="container mx-auto">
+                <div id="heading" class="text-2xl">Here is our products.</div>
+            </div>
+            <section class="container">
+                <div id="product-container" class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:grid-cols-3">
+
+                    <template id="product-template" class="">
+                        <div id="cardValue" class="cards border border-black">
+                            <article class="information [card] flex flex-col p-4 gap-2">
+                                <span class="catagory text-sm p-1 bg-blue-200 rounded self-start"></span>
+                                <div id="imageContainer" class="h-[200px] w-auto  mx-auto">
+                                    <img  class="productImage h-[100%] w-[100%] object-cover bg-center" src="/image/laptop-2.jpg" alt="">
+                                </div>
+                                <h2 id="productName" class="text-lg font-semibold"></h2>
+                                <p class="productDescription text-gray-700"></p>
+                                <div class="productActualPricebox flex flex-row gap-6">
+                                    <p class="productPrice"></p>
+                                    <p class="productActualPrice line-through"></p>
+                                </div>
+                                <div class="productStockElement flex flex-row gap-2">
+                                    <p class="productProperty">Total stock: </p>
+                                    <p class="productStock"></p>
+                                </div>
+                                <div class="productQuantityElement flex items-center space-x-16">
+                                    <div class="productProperty">Quantity</div>
+                                    <div class="stockElement flex flex-row gap-6 border border-gray-400 px-2 py-1">
+                                        <button class="productIncrement">+</button>
+                                        <p class="productQuantity">1</p>
+                                        <button class="productDecrement">-</button>
+                                    </div>
+                                </div>
+                                <div class="add-to-cart mt-4 bg-black text-white p-2 rounded text-center cursor-pointer hover:bg-gray-950 transition-all">
+                                    <i class="fa-solid fa-cart-shopping "></i>Add To Cart
+                                </div>
+                            </article>
+                        </div>
+                    </template>
+                    
+                </div>
+            </section>
+        </section>
+
+
+        
+
+        
+         
+         
+    </main>
+
+    <!--footer section-->
+     
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+    .list-sty {
+        @apply text-lg font-extralight hover:underline hover:underline-offset-4 hover:transition-all;
+    }
+    .list-sty-menu {
+        @apply text-lg text-white font-medium hover:underline hover:underline-offset-4 hover:transition-all;
+    }
+    .about-box{
+        @apply flex justify-between bg-gray-300 shadow-inner px-4 py-2;
+    }
+   
+}

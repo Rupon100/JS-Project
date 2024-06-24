@@ -1,0 +1,68 @@
+[
+    {
+       "id": 1,
+       "name": "Laptop one",
+       "category": "Computers",
+       "brand": "example",
+       "price": 999.00,
+       "mainPrice": 1300.00,
+       "stock": 20,
+       "description": "Most powerfull laptop with expensive all thing",
+       "image": "/image/laptop-1.jpg"
+    },
+    {
+       "id": 2,
+       "name": "Laptop two",
+       "category": "Computers",
+       "brand": "example",
+       "price": 699.00,
+       "mainPrice": 800.00,
+       "stock": 50,
+       "description": "Most powerfull laptop with expensive all thing",
+       "image": "/image/laptop-1.jpg"
+    },
+    {
+       "id": 3,
+       "name": "Laptop three",
+       "category": "Computers",
+       "brand": "example",
+       "price": 1999.00,
+       "mainPrice": 2500.00,
+       "stock": 20,
+       "description": "Most powerfull laptop with expensive all thing",
+       "image": "/image/laptop-3.jpg"
+    },
+    {
+       "id": 4,
+       "name": "Laptop four",
+       "category": "Computers",
+       "brand": "HP",
+       "price": 1200.00,
+       "mainPrice": 1500.00,
+       "stock": 5,
+       "description": "Most powerfull laptop with expensive all thing",
+       "image": "/image/laptop-4.jpg"
+    },
+    {
+       "id": 5,
+       "name": "Laptop five",
+       "category": "Computers",
+       "brand": "MackBook",
+       "price": 599.00,
+       "mainPrice": 650.00,
+       "stock": 15,
+       "description": "Most powerfull laptop with expensive all thing",
+       "image": "/image/laptop-5.jpg"
+    },
+    {
+       "id": 6,
+       "name": "Laptop six",
+       "category": "Computers",
+       "brand": "example",
+       "price": 100,
+       "mainPrice": 120.00,
+       "stock": 3,
+       "description": "Most powerfull laptop with expensive all thing",
+       "image": "/image/laptop-6.jpg"
+    }
+]
